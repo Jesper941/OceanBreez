@@ -1,0 +1,10 @@
+Steps
+
+1. index.html and initial commit
+2. install flask and run "touch py.run"
+3. add all necessary html files and error pages
+4. connect all HTML with route inheritance in run.PY
+5. install Clean Blog bootstrap
+6. Switch directories for bootstrap files and edit base.html head
+7. Use Clean Blog's template to build base.html
+8. Change NavBar styling in CSS (BOTH FILES!)
