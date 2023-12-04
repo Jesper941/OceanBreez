@@ -12,13 +12,19 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/clean-blog.min.css') }}"
     />
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}" />
     <title>Hello Flask</title>
   </head>
 
   <body>
+    <div class="bg-image-right"></div>
+    <img
+      src="{{ url_for('static', filename='outdoor.jpg') }}"
+      alt="Description of the image"
+    />
     <nav
       class="navbar navbar-expand-lg fixed-top"
-      style="background-color: rgb(147, 128, 105); color: ivory;"
+      style="background-color: rgb(147, 128, 105); color: ivory"
       id="mainNav"
     >
       <div class="container">
@@ -63,6 +69,7 @@
     </nav>
 
     <!-- Page Header -->
+
     <header
       class="masthead"
       style="background-image: url('{{ url_for('static', filename='img/home-bg.jpg') }}')"
@@ -71,9 +78,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading" style="background-color: rgba(246, 215, 176, .4); color: ivory;">
+            <div
+              class="site-heading content"
+              style="background-color: rgba(246, 215, 176, 0.4); color: ivory"
+            >
+              <div class="content-text">
                 <h1>Long Beach</h1>
-                <span class="subheading">A Restaurant That Lies Right By The Ocean</span>
+                <span class="subheading"
+                  >A Restaurant That Lies Right By The Ocean</span
+                >
+              </div>
             </div>
           </div>
         </div>
