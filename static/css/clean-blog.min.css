@@ -96,7 +96,7 @@ img::-moz-selection {
 
 #mainNav .navbar-brand {
     font-weight: 800;
-    color: #343a40
+    color: ivory;
 }
 
 #mainNav .navbar-toggler {
@@ -104,14 +104,15 @@ img::-moz-selection {
     font-weight: 800;
     padding: 13px;
     text-transform: uppercase;
-    color: #343a40
+    color: ivory;
 }
 
 #mainNav .navbar-nav>li.nav-item>a {
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 1px;
-    text-transform: uppercase
+    text-transform: uppercase;
+    color: ivory;
 }
 
 @media only screen and (min-width:992px) {
