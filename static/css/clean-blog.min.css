@@ -448,6 +448,6 @@ footer .copyright {
         text-align: center;
     }
 
-.contact-background {
-    background-color: rgba(147, 128, 105);
+#formbackground {
+    background-color: white;
 }
