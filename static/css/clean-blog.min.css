@@ -7,6 +7,8 @@ body {
     font-size: 20px;
     color: #212529;
     font-family: Lora, 'Times New Roman', serif;
+    background: linear-gradient(to right, rgba(246, 215, 176, 0.4) 65%, skyblue);
+
 }
 
 p {
@@ -426,4 +428,26 @@ footer .copyright {
 .btn-lg {
     font-size: 16px;
     padding: 25px 35px
+}
+
+#menuHeaders {
+    font-size: 36px;
+    padding:15px;
+}
+
+#h1Menu {
+    font-size: 50px;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+@media only screen and (max-width:996px) {
+    #menuHeaders {
+        justify-content: center;
+        text-align: center;
+    }
+
+.contact-background {
+    background-color: rgba(147, 128, 105);
 }

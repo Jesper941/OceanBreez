@@ -17,11 +17,8 @@
   </head>
 
   <body>
-    <div class="bg-image-right"></div>
-    <img
-      src="{{ url_for('static', filename='outdoor.jpg') }}"
-      alt="Description of the image"
-    />
+    <div class="gradient-background"></div>
+
     <nav
       class="navbar navbar-expand-lg fixed-top"
       style="background-color: rgb(147, 128, 105); color: ivory"
@@ -49,16 +46,10 @@
               <a class="nav-link" href="{{ url_for('index') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('about') }}">About</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="{{ url_for('menu') }}">Menu</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('booking') }}">Booking</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('location') }}">Location</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
@@ -95,7 +86,9 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container">{% block template %} {% endblock %}</div>
+    <div class="container">
+    
+    {% block template %} {% endblock %}</div>
 
     <hr />
 
