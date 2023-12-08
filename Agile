@@ -19,7 +19,8 @@ Steps
 17. 
 18. install Django pip3 install 'django<4'
 19. django-admin startproject PROJ_NAME'.'
-20. 
+20. create booking app
+21. set up booking system with DB
 
 
 
