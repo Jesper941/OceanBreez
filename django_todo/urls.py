@@ -16,12 +16,14 @@ Including another URLconf
 
 # django_todo/urls.py
 
+
 from django.contrib import admin
 from django.urls import path, include
-from bookings.views import book_table, booking_success  # Update this line
+from bookings.views import home_view, index  # Update this import based on your views
 
 urlpatterns = [
+    path('', home_view, name='home'),  # Add this line for the root URL
     path('admin/', admin.site.urls),
     path('bookings/', include('bookings.urls')),
+    path('index/', index, name='index')
 ]
-

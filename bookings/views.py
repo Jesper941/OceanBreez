@@ -2,7 +2,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .forms import BookingForm
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.messages import get_messages
 
 @login_required
 def book_table(request):
@@ -18,6 +20,29 @@ def book_table(request):
 
     return render(request, 'bookings/book_table.html', {'form': form})
 
-    def booking_success(request):
-        return render(request, 'bookings/booking_success.html')
-    
+@login_required
+def booking_success(request):
+    return render(request, 'bookings/booking_success.html')
+
+from django.shortcuts import render
+
+def home_view(request):
+    return render(request, 'index.html', {'variable': 'value'})
+
+def index(request):
+    # Your view logic here
+    return render(request, 'index.html')
+
+def menu(request):
+    # Your view logic here
+    return render(request, 'menu.html')
+
+def contact(request):
+    flashed_messages = [message.message for message in get_messages(request)]
+    return render(request, 'contact.html', {'flashed_messages': flashed_messages})
+def booking (request):
+    return render(request, 'booking.html')
+
+def message_success(request):
+    messages.success(request, 'Your message was sent successfully!')
+    return redirect('contact_page')
