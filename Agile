@@ -8,6 +8,22 @@ Steps
 6. Switch directories for bootstrap files and edit base.html head
 7. Use Clean Blog's template to build base.html
 8. Change NavBar styling in CSS (BOTH FILES!)
+9. create menu for the menu.html
+10. create information for index.html
+11. create location and contact information for contact.html
+12. create email form for contact.html
+13. create env.py and edit run.py
+14. edit css files to preference
+15. 
+16. 
+17. 
+18. install Django pip3 install 'django<4'
+19. django-admin startproject PROJ_NAME'.'
+20. 
+
+
+
+install Django
 
 
 
