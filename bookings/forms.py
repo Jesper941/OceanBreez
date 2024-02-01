@@ -1,7 +1,7 @@
 
-# bookings/forms.py
+# bookings forms
 from django import forms
-from .models import Booking  # Assuming you have a model named Booking
+from .models import Booking 
 
 class BookingForm(forms.ModelForm):
     class Meta:

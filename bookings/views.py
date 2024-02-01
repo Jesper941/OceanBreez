@@ -30,11 +30,9 @@ def home_view(request):
     return render(request, 'index.html', {'variable': 'value'})
 
 def index(request):
-    # Your view logic here
     return render(request, 'index.html')
 
 def menu(request):
-    # Your view logic here
     return render(request, 'menu.html')
 
 def contact(request):
