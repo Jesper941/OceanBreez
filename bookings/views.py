@@ -6,6 +6,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages import get_messages
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login
+from .forms import BookingForm, RegistrationForm
 
 
 def booking(request):
@@ -42,6 +44,15 @@ def book_table(request):
 @login_required
 def booking_success(request):
     return render(request, 'bookings/booking_success.html')
+
+def register(request):
+    form = RegistrationForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('book_table')
+    return render(request, 'registration.html', {'form': form})
 
 
 def home_view(request):

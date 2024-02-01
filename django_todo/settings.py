@@ -125,6 +125,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+LOGIN_URL = 'login'
 
-# Redirects users to the book_table.html after successful login
+# Redirects users to the book_table.html after successful login in booking.html
 LOGIN_REDIRECT_URL = 'book_table'

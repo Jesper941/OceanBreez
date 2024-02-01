@@ -40,3 +40,5 @@ Happy coding!
 
 
 <https://www.scaler.com/topics/bootstrap-tutorial/bootstrap-datepicker/>
+<https://docs.djangoproject.com/en/5.0/>
+<https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django>

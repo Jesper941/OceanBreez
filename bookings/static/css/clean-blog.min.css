@@ -432,7 +432,7 @@ footer .copyright {
 
 #menuHeaders {
     font-size: 36px;
-    padding:15px;
+    padding: 15px;
 }
 
 #h1Menu {
@@ -448,7 +448,7 @@ footer .copyright {
         text-align: center;
     }
 
-#formbackground {
-    background-color: white;
-}
+    #formbackground {
+        background-color: white;
+    }
 }
