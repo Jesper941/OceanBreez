@@ -5,7 +5,23 @@ from .forms import BookingForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages import get_messages
+from django.contrib.auth.forms import AuthenticationForm
 
+
+def booking(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('book_table')
+        else:
+            # Handle invalid login
+            messages.error(request, 'Invalid login credentials. Please try again.')
+
+    return render(request, 'booking.html')
 
 @login_required
 def book_table(request):
@@ -41,6 +57,12 @@ def contact(request):
 
 def booking (request):
     return render(request, 'booking.html')
+
+def book_table (request):
+    return render(request, 'book_table.html')
+
+def booking_success (request):
+    return render(request, 'booking_success')
 
 def message_success(request):
     messages.success(request, 'Your message was sent successfully!')
