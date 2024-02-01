@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages import get_messages
 
+
 @login_required
 def book_table(request):
     if request.method == 'POST':
@@ -14,7 +15,7 @@ def book_table(request):
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
-            return redirect('booking_success')  # create a success page
+            return redirect('booking_success') 
     else:
         form = BookingForm()
 
@@ -24,7 +25,6 @@ def book_table(request):
 def booking_success(request):
     return render(request, 'bookings/booking_success.html')
 
-from django.shortcuts import render
 
 def home_view(request):
     return render(request, 'index.html', {'variable': 'value'})
@@ -38,6 +38,7 @@ def menu(request):
 def contact(request):
     flashed_messages = [message.message for message in get_messages(request)]
     return render(request, 'contact.html', {'flashed_messages': flashed_messages})
+
 def booking (request):
     return render(request, 'booking.html')
 
