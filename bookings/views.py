@@ -9,6 +9,8 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 def booking(request):
+    login_form = AuthenticationForm()
+
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -21,7 +23,7 @@ def booking(request):
             # Handle invalid login
             messages.error(request, 'Invalid login credentials. Please try again.')
 
-    return render(request, 'booking.html')
+    return render(request, 'booking.html', {'login_form': login_form})
 
 @login_required
 def book_table(request):
@@ -54,15 +56,6 @@ def menu(request):
 def contact(request):
     flashed_messages = [message.message for message in get_messages(request)]
     return render(request, 'contact.html', {'flashed_messages': flashed_messages})
-
-def booking (request):
-    return render(request, 'booking.html')
-
-def book_table (request):
-    return render(request, 'book_table.html')
-
-def booking_success (request):
-    return render(request, 'booking_success')
 
 def message_success(request):
     messages.success(request, 'Your message was sent successfully!')

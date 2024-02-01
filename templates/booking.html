@@ -1,10 +1,10 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends "base.html" %} {% block template %}
 
-<h2>Login</h2>
-<form method="post" action="{% url 'login' %}">
-    {% csrf_token %} {{ login_form.as_p }}
-    <button type="submit">Login</button>
+<h3>In order to place or change a reservation, you must be logged in</h3>
+<br>
+<form method="post" action="{% url 'login' %}" id="loginForm">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" id="loginButton">Login</button>
 </form>
 
 {% endblock %}
