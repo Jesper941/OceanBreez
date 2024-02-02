@@ -1,5 +1,6 @@
 <!-- bookings/templates/bookings/edit_booking.html -->
-{% extends 'base.html' %} {% block template %}
+{% extends 'base.html' %}
+{% block template %}
 
 <h3>Edit Booking</h3>
 <form method="post" action="{% url 'edit_booking' booking_id=form.instance.id %}">
@@ -7,6 +8,14 @@
     {{ form.as_p }}
     <button type="submit">Save Changes</button>
 </form>
+{% endblock %}
 
-
+{% block messages %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+</ul>
+{% endif %}
 {% endblock %}
