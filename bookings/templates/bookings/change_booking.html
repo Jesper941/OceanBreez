@@ -5,6 +5,8 @@
 <p>
     Enter your name, the new date, and the new time you wish to change your booking to
 </p>
+
+<!--Change booking form-->
 <form method="post" action="{% url 'change_booking' %}">
     {% csrf_token %}
     {{ change_booking_form.as_p }}

@@ -9,7 +9,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
 from .models import Booking
 
-
+# Handles the login
 def booking(request):
     login_form = AuthenticationForm()
 
@@ -27,6 +27,7 @@ def booking(request):
 
     return render(request, 'booking.html', {'login_form': login_form})
 
+# Handles the booking of a table
 @login_required
 def book_table(request):
     if request.method == 'POST':
@@ -41,11 +42,12 @@ def book_table(request):
 
     return render(request, 'bookings/book_table.html', {'form': form})
 
-
+# Shows you that the booking was successful
 @login_required
 def booking_success(request):
     return render(request, 'bookings/booking_success.html')
 
+# Handles the changing of a booking
 @login_required
 def change_booking(request):
     if request.method == 'POST':
@@ -57,6 +59,7 @@ def change_booking(request):
     form = ChangeBookingForm(request.user)
     return render(request, 'bookings/change_booking.html', {'change_booking_form': form})
 
+# Handles the changing of a booking
 @login_required
 def edit_booking(request, booking_id):
     existing_booking = get_object_or_404(Booking, id=booking_id, user=request.user)
@@ -71,8 +74,7 @@ def edit_booking(request, booking_id):
     return render(request, 'bookings/edit_booking.html', {'form': form})
 
 
-
-
+# Handles registration of a new user
 def register(request):
     form = RegistrationForm(request.POST or None)
     if request.method == 'POST':
@@ -82,7 +84,7 @@ def register(request):
             return redirect('book_table')
     return render(request, 'registration.html', {'form': form})
 
-
+# Different simple views and flash messages
 def home_view(request):
     return render(request, 'index.html', {'variable': 'value'})
 

@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.views import LoginView, LogoutView
 from .views import book_table, booking_success, index, menu, contact, booking, register, change_booking, edit_booking
 
+# All necessary urlpatterns
 urlpatterns = [
     path('index/', index, name='index'),
     path('menu/', menu, name='menu'),

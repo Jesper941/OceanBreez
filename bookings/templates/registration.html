@@ -2,6 +2,8 @@
 {% block template %}
 
 <h2>Register New Account</h2>
+
+<!--Registration form-->
 <form method="post" action="{% url 'register' %}" id="registerForm">
     {% csrf_token %}
     {{ form.as_p }}
