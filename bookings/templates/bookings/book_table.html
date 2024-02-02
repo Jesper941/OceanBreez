@@ -1,11 +1,21 @@
-{% extends 'base.html' %}
-{% block template %}
+{% extends 'base.html' %} {% block template %}
 
-<h2>Book a Table</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Book Now</button>
-</form>
+<div class="row">
+  <div class="col-5">
+    <h3>Book a Table</h3>
+    <form method="post" action="{% url 'book_table' %}">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+
+  <div class="col-5">
+    <h3>Change Existing Booking</h3>
+    <form method="post" action="{% url 'change_booking' %}">
+      {% csrf_token %} {{ change_booking_form.as_p }}
+      <button type="submit">Change Booking</button>
+    </form>
+  </div>
+</div>
 
 {% endblock %}

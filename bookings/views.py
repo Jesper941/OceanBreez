@@ -1,13 +1,13 @@
 # bookings/views.py
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
-from .forms import BookingForm
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import BookingForm, ChangeBookingForm, RegistrationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.messages import get_messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
-from .forms import BookingForm, RegistrationForm
+from .models import Booking
 
 
 def booking(request):
@@ -33,7 +33,7 @@ def book_table(request):
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
-            booking.user = request.user
+            booking.user = request.user  # Associate the booking with the logged-in user
             booking.save()
             return redirect('booking_success') 
     else:
@@ -41,9 +41,37 @@ def book_table(request):
 
     return render(request, 'bookings/book_table.html', {'form': form})
 
+
 @login_required
 def booking_success(request):
     return render(request, 'bookings/booking_success.html')
+
+@login_required
+def change_booking(request):
+    if request.method == 'POST':
+        form = ChangeBookingForm(request.user, request.POST)
+        if form.is_valid():
+            booking_to_change = form.cleaned_data['booking_to_change']
+            return redirect('edit_booking', booking_id=booking_to_change.id)
+
+    form = ChangeBookingForm(request.user)
+    return render(request, 'bookings/change_booking.html', {'change_booking_form': form})
+
+@login_required
+def edit_booking(request, booking_id):
+    existing_booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=existing_booking)
+        if form.is_valid():
+            form.save()
+            return redirect('edit_booking', booking_id=existing_booking.id)
+
+    form = BookingForm(instance=existing_booking)
+    return render(request, 'bookings/edit_booking.html', {'form': form})
+
+
+
 
 def register(request):
     form = RegistrationForm(request.POST or None)
