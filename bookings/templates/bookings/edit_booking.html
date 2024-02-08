@@ -7,14 +7,7 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Save Changes</button>
-    <button type="button" onclick="confirmCancel()">Cancel Booking</button>
-    </form>
-        
-<script>
-    function confirmCancel() {
-        if (confirm("Are you sure you want to cancel this booking?")) {
-            window.location.href = "{% url 'cancel_booking' booking_id=existing_booking.id %}";}
-            }
-</script>
+    <button type="submit" name="cancel_booking" value="true">Cancel Booking</button>
+</form>
 
 {% endblock %}

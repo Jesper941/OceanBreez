@@ -42,10 +42,15 @@ def book_table(request):
 
     return render(request, 'bookings/book_table.html', {'form': form})
 
-# Shows you that the booking was successful
+# Confirms that the booking was successful
 @login_required
 def booking_success(request):
     return render(request, 'bookings/booking_success.html')
+
+# Confirms that the cancelation was succesful
+def cancel_booking_success(request):
+    return render(request, 'bookings/cancel_booking_success.html')
+
 
 # Handles the changing of a booking
 @login_required
@@ -60,18 +65,27 @@ def change_booking(request):
     return render(request, 'bookings/change_booking.html', {'change_booking_form': form})
 
 # Also handles the changing of a booking
+# bookings/views.py
+
 @login_required
 def edit_booking(request, booking_id):
     existing_booking = get_object_or_404(Booking, id=booking_id, user=request.user)
 
     if request.method == 'POST':
-        form = BookingForm(request.POST, instance=existing_booking)
-        if form.is_valid():
-            form.save()
-            return redirect('booking_success')
-
-    form = BookingForm(instance=existing_booking)
+        if 'cancel_booking' in request.POST:
+            existing_booking.delete()
+            return redirect('cancel_booking_success')
+        else:
+            form = BookingForm(request.POST, instance=existing_booking)
+            if form.is_valid():
+                form.save()
+                return redirect('booking_success')
+    else:
+        form = BookingForm(instance=existing_booking)
+    
     return render(request, 'bookings/edit_booking.html', {'form': form, 'existing_booking': existing_booking})
+
+
 
 
 # Handles registration of a new user
@@ -83,12 +97,6 @@ def register(request):
             login(request, user)
             return redirect('book_table')
     return render(request, 'registration.html', {'form': form})
-
-@login_required
-def cancel_booking(request, booking_id):
-    existing_booking = get_object_or_404(Booking, id=booking_id, user=request.user)
-    existing_booking.delete()
-    return redirect('booking_success')
 
 # Different simple views and flash messages
 def home_view(request):
