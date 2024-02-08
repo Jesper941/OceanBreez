@@ -113,6 +113,7 @@ This project was developed with 5 milestones (epics) in mind. From each of these
 - Goal 5 - Allow the user to select an existing booking and edit/add/remove information from the booking.
 - Goal 6 - Allow the administrator to cancel, reschedule or edit all any booking
 - Goal 7 - Allow the administrator to edit or delete registered users
+- Goal 8 - Allow users to cancel their bookings
 
 ## Scope
 
@@ -124,9 +125,9 @@ So with all of these user stories and developing goals in mind, the list of thin
   - An index / homepage with information about the restaurant and it's history
   - A menu page where the users can inspect the food that's being served before deciding to book a table
   - A contact page where users can find the restaurant's location and contact information
-  - A table booking page where users can register in order to book, view, edit or add to their booking
+  - A table booking page where users can register in order to book, view, edit, cancel or add information to their booking
 - An admin site where the administrators can create, edit or remove bookings
-- And admin site where the administrators can create, edit or delete registered users
+- An admin site where the administrators can create, edit or delete registered users
 
 ## Design
 
@@ -134,11 +135,11 @@ So with all of these user stories and developing goals in mind, the list of thin
 
 Here is the color palette for the colors that I've used to create this website.
 
-![The Ocean Breeze color palette](assets/images/quizpalette.png)
+![The Ocean Breeze color palette](bookings/static/img/ColorPaletteOceanBreeze.png)
 
 ### Typography
 
-I use the "Calibri" font style for the entire website. The backup font styles are set as "Times New Roman, Times, Serif".
+I use the 'Lora', 'Times New Roman' and 'serif' font style for the entire website.
 
 ### Function Styling
 

@@ -59,7 +59,7 @@ def change_booking(request):
     form = ChangeBookingForm(request.user)
     return render(request, 'bookings/change_booking.html', {'change_booking_form': form})
 
-# Handles the changing of a booking
+# Also handles the changing of a booking
 @login_required
 def edit_booking(request, booking_id):
     existing_booking = get_object_or_404(Booking, id=booking_id, user=request.user)
@@ -71,7 +71,7 @@ def edit_booking(request, booking_id):
             return redirect('booking_success')
 
     form = BookingForm(instance=existing_booking)
-    return render(request, 'bookings/edit_booking.html', {'form': form})
+    return render(request, 'bookings/edit_booking.html', {'form': form, 'existing_booking': existing_booking})
 
 
 # Handles registration of a new user
@@ -83,6 +83,12 @@ def register(request):
             login(request, user)
             return redirect('book_table')
     return render(request, 'registration.html', {'form': form})
+
+@login_required
+def cancel_booking(request, booking_id):
+    existing_booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    existing_booking.delete()
+    return redirect('booking_success')
 
 # Different simple views and flash messages
 def home_view(request):

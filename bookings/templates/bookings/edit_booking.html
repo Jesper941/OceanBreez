@@ -7,15 +7,14 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Save Changes</button>
-</form>
-{% endblock %}
+    <button type="button" onclick="confirmCancel()">Cancel Booking</button>
+    </form>
+        
+<script>
+    function confirmCancel() {
+        if (confirm("Are you sure you want to cancel this booking?")) {
+            window.location.href = "{% url 'cancel_booking' booking_id=existing_booking.id %}";}
+            }
+</script>
 
-{% block messages %}
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-        {% endfor %}
-</ul>
-{% endif %}
 {% endblock %}

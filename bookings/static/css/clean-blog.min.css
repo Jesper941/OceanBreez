@@ -7,7 +7,7 @@ body {
     font-size: 20px;
     color: #212529;
     font-family: Lora, 'Times New Roman', serif;
-    background: linear-gradient(to right, rgba(246, 215, 176, 0.4) 65%, skyblue);
+    background: linear-gradient(to right, rgba(246, 215, 176, 0.4) 65%, #87ceeb);
 
 }
 
@@ -98,7 +98,7 @@ img::-moz-selection {
 
 #mainNav .navbar-brand {
     font-weight: 800;
-    color: ivory;
+    color: #fffff0;
 }
 
 #mainNav .navbar-toggler {

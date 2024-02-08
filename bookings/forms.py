@@ -8,7 +8,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, User
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['name', 'email', 'phone', 'date', 'time']
+        fields = ['name', 'email', 'phone', 'date', 'time','company_size']
 
 class RegistrationForm(UserCreationForm):
     class Meta:
