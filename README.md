@@ -31,9 +31,7 @@ You can view the GitHub code pages here. (<https://github.com/Jesper941/OceanBre
     - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
     - [Function Styling](#function-styling)
-  - [Features](#features)
-  - [How to Play](#how-to-play)
-    - [Navigation](#navigation)
+  - [Implementations \& Accessability](#implementations--accessability)
     - [Future Implementations](#future-implementations)
     - [Accessibility](#accessibility)
   - [Technologies Used](#technologies-used)
@@ -143,73 +141,63 @@ I use the 'Lora', 'Times New Roman' and 'serif' font style for the entire websit
 
 ### Function Styling
 
-- Starting off with the home page where the visitor has to enter a valid username.
-  A blank space for their username will not be valid and a message will be prompted as in the picture.
+- Starting off with the home page where the visitor can read about the history of the Ocean Breeze.
 
-![username](assets/images/enter-valid-name.png)
+![homepage](bookings/static/img/homepage.png)
 
-- Once you've entered a valid username, the introduction area will disappear and the quiz will appear.
+- The menu page where visitors can take a glance at the menu before visiting the restaurant.
 
-![quiz-appearing](assets/images/quiz-area.png)
+![menu](bookings/static/img/menupage.png)
 
-- If you enter an incorrect answer, the answer you chose will turn red. Your point score will stay the same, and when you hit the "next question" button, the question number counter will increase.
+- In the contact page, this is where the visitors can find the restaurants location and opening hours.
 
-![wrong](assets/images/wrong.png)
+![location](bookings/static/img/location.png)
 
-- If you answer a question correctly, the question you chose turns green. Your point score will increase by one and as soon as you click the "next question" button, the question number counter will increase.
+Here is the contact form at the bottom of the contact page where visitors can send in any questions they may have.
 
-![correct](assets/images/correct.png)
+![contact-form](bookings/static/img/contactform.png)
 
-- If you end up with a score of 3 or lower, you get the following message.
+- Here is the booking page where you can chose to login to your account, or register a new account.
 
-  ![low-score](assets/images/low-score.png)
+![booking](bookings/static/img/bookingpage.png)
 
-- If you end up with a score of 4 and 6, you get the following message.
+- If you press the link to register a new account, it will bring you to the account creation page.
 
-  ![mid-score](assets/images/mid-score.png)
+  ![register](bookings/static/img/register_account.png)
 
-- If you end up with a score of 7 or higher, you get the following message.
+- If you press to link to login, it will bring you to the login page.
 
-  ![high-score](assets/images/high-score.png)
+  ![login](bookings/static/img/login_screen.png)
 
-- If you press the "Replay" button by the end of the quiz, you get taken straight back to the first question of the next quiz.
+- Once you've created a new account or logged into your existing account, it will bring you to this page where you can make a booking for a table, or change an existing booking.
 
-  ![replay](assets/images/replay.png)
+  ![book-change-table](bookings/static/img/book_change_table.png)
+
+- If you create a new booking successfully, it will take you to this page that let's the visitor know their booking was successful.
+
+  ![book-success](bookings/static/img/successful_booking.png)
+
+- If the visitor presses the "change existing booking" button, it will take you to this page where the visitor can chose which booking to edit or cancel if they have multiple bookings.
+
+  ![change-booking](bookings/static/img/chose_booking.png)
+
+- If the visitor changes any information and then hits the "save changes" button, they will be taken to the page where it says your booking was successful.
+
+  ![successful-change](bookings/static/img/successful_booking.png)
+
+- If the visitor elects to cancel their booking and it is successful, they will be taken to this page that confirms their booking to be canceled.
+
+  ![succesful-cancel](bookings/static/img/cancellation_success.png)
 
 ---
 
-## Features
-
-What does this quiz feature?
-
-- 10 challenging NHL-related questions.
-- Multiple-choice answers for each question.
-- Interactive design with user-friendly buttons.
-- Real-time scoring to track your progress.
-- A final score page with personalized feedback.
-- Replay the quiz to improve your score.
-
-## How to Play
-
-- Visit the NHL Quiz webpage.
-- Enter your name in the provided field.
-- Click the "Start Quiz" button.
-- Answer each question by clicking on the multiple-choice options.
-- Click the "Next Question" button to advance.
-- After 10 questions, see your final score and feedback.
-- Click "Replay" to play the quiz again and beat your previous score.
-
-### Navigation
-
-There is really only one page, but the NHL-shield logo in the top left corner will load the index.html and take you back to the beginning of the quiz where you enter your username.
-
-![logo-link](assets/images/link-shield.png)
+## Implementations & Accessability
 
 ### Future Implementations
 
-- Add a choice for the player on how many questions the quiz should be.
-- Add images that show up when the correct answer has been chosen.
-- Increase the library, or array, of questions for the quiz.
+- Add a possibility for users to recover their passwords on their own
+- Add photos of the dishes on the menu page
+- 
 
 ---
 
@@ -218,16 +206,13 @@ There is really only one page, but the NHL-shield logo in the top left corner wi
 In order to ensure that the website has good accessibility, I have used different semantic tags,
 such as header, main, section, etc.
 
-- I have used an "alt" attribute on the banner image.
-- Using colors that mix well together and allow the visitor to easily read the answers, read the options, and find the buttons without struggle.
-
 ---
 
 ## Technologies Used
 
 ### Languages Used
 
-I used HTML and CSS to build this website.
+I used HTML, CSS, JavaScript and the frameworks flask and Django to build this website.
 
 ### Local Development
 
@@ -236,14 +221,14 @@ Instructions on how to fork and clone the project.
 #### How to Fork
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, (https://github.com/Jesper941/nhlquiz.git)
+2. Go to the repository for this project, (<https://github.com/Jesper941/OceanBreez.git>)
 3. Click the Fork button in the top right corner.
 
 #### How to Clone
 
 Log in (or sign up) to GitHub.
 
-1. Go to the repository for this project, (https://github.com/Jesper941/nhlquiz.git)
+1. Go to the repository for this project, (<https://github.com/Jesper941/OceanBreez.git>)
 2. Click on the code button, select whether you want to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
 3. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 4. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
@@ -258,15 +243,13 @@ Here i'm gonna list the credits to all the sources that helped me out during thi
 
 ### Code Used
 
-1. Some general tips and tricks from youtuber Brocode and his video: <https://youtu.be/HGTJBPNC-Gw?si=MoPalcBbt6jw2o88>
-2. For the stroke text i went here for help: <https://css-tricks.com/adding-stroke-to-web-text/>
-3. I took a lot of help from this website when i needed help with coding and styling the pseudo-elements for the links in the nav bar: <https://stackoverflow.com/questions/10143357/how-to-make-these-buttons-not-appear-as-blue-links>
-4. For help with coding the responsive flexboxes for my text containers, i took help from the flexbox section of this website: <https://www.w3schools.com/css/css3_flexbox_responsive.asp>
-5. To truly understand the meaning and difference between margin and padding, i took help from these sites. <https://www.w3schools.com/css/css_margin.asp> and <https://www.w3schools.com/css/css_padding.asp>
-6. i couldn't figure out how to make the text-containers to not go across the full width of the page, so i use some of the code here to learn and use in my text containers: <https://www.w3schools.com/css/css_max-width.asp>
-7. I found some help on how to solve blank space validation: https://stackoverflow.com/questions/1151032/javascript-blank-space-validation
-8. How to properly use the firstChild property: https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild
-9. How to use the innerText property to change the text of elements after a function or event happens: https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText
+1. Some general tips and tricks from youtuber Brocode and his video: <https://www.youtube.com/watch?v=rHux0gMZ3Eg&t=40s>
+2. For the forms, i took help from this website: <https://docs.djangoproject.com/en/5.0/topics/forms/>
+3. I took a lot of help on how to work with flask and Django at the same time: <https://flask.palletsprojects.com/en/3.0.x/tutorial/>
+4. For some help with my models, i took help from this site: <https://docs.djangoproject.com/en/5.0/topics/db/models/>
+5. Most of the help came from the course material on the Code Institute website.
+6. I again used my lovely girlfriend to help me make up a story and theme for the restaurant.
+7. For some information about databases, i went here: <https://docs.djangoproject.com/en/5.0/ref/databases/>
 
 ### Content
 
@@ -274,12 +257,8 @@ I wrote the code myself but with some help from the sites and people mentioned a
 
 ### Media
 
-Background image in the header: <https://www.hockeymonkey.com/media/magefan_blog/Hockey_Trivia_Banner.jpg>
+Background image in the base.html <https://unsplash.com/photos/a-restaurant-with-a-view-of-the-water-YYZU0Lo1uXE>
 
 ### Feedback
 
 If you have any feedback or questions, please reach out to me via my email: Jesper941@hotmail.com
-
-<https://www.scaler.com/topics/bootstrap-tutorial/bootstrap-datepicker/>
-<https://docs.djangoproject.com/en/5.0/>
-<https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django>

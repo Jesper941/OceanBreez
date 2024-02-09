@@ -1,10 +1,10 @@
-{% extends 'base.html' %}
-{% block template %}
+{% extends 'base.html' %} {% block template %}
+
+<h3>Login to create or change your booking</h3>
 
 <form method="post" action="{% url 'login' %}" id="loginForm">
-    {% csrf_token %} {{ form.as_p }}
-    <button type="submit" id="loginButton">Login</button>
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" id="loginButton">Login</button>
 </form>
-
 
 {% endblock %}
