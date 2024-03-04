@@ -2,8 +2,6 @@
 
 "Welcome to the Ocean Breeze! A cozy restaurant located by the shore with amazing, fresh food with freshly caught fish and seafood."
 
-![responsiveness](assets/images/responsive-quiz.png)
-
 LIVE WEBSITE
 
 You can view a live version of the website here.(<https://young-anchorage-44026-d8f70dc45a2a.herokuapp.com/>)
@@ -197,7 +195,6 @@ Here is the contact form at the bottom of the contact page where visitors can se
 
 - Add a possibility for users to recover their passwords on their own
 - Add photos of the dishes on the menu page
-- 
 
 ---
 
