@@ -65,7 +65,6 @@ def change_booking(request):
     return render(request, 'bookings/change_booking.html', {'change_booking_form': form})
 
 # Also handles the changing of a booking
-# bookings/views.py
 
 @login_required
 def edit_booking(request, booking_id):
@@ -110,7 +109,7 @@ def menu(request):
 
 def contact(request):
     flashed_messages = [message.message for message in get_messages(request)]
-    return render(request, 'contact.html', {'flashed_messages': flashed_messages})
+    return render(request, 'contact.html', {'messages': flashed_messages})
 
 def message_success(request):
     messages.success(request, 'Your message was sent successfully!')

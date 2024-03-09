@@ -4,17 +4,21 @@ from django import forms
 from .models import Booking, ChangeBooking
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, User
 
+# Booking form
 
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['name', 'email', 'phone', 'date', 'time','company_size']
 
+# Registration form
+
 class RegistrationForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'password1', 'password2']
 
+# Change Booking form
 
 class ChangeBookingForm(forms.ModelForm):
     class Meta:

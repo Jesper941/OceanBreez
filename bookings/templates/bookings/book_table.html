@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block template %}
 <!--Book a table form-->
+
 <div class="row">
   <div class="col-5">
     <h3>Book a Table</h3>
@@ -10,6 +11,7 @@
   </div>
 
 <!--Change booking form-->
+
   <div class="col-5">
     <h3>Change Existing Booking</h3>
     <form method="post" action="{% url 'change_booking' %}">

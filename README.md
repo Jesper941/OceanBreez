@@ -247,6 +247,8 @@ Here i'm gonna list the credits to all the sources that helped me out during thi
 5. Most of the help came from the course material on the Code Institute website.
 6. I again used my lovely girlfriend to help me make up a story and theme for the restaurant.
 7. For some information about databases, i went here: <https://docs.djangoproject.com/en/5.0/ref/databases/>
+8. For help bulding tests: https://docs.djangoproject.com/en/5.0/topics/testing/overview/
+
 
 ### Content
 
