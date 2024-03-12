@@ -36,44 +36,45 @@ I have written 3 simple tests for my project. More information about them can be
 
 ## Lighthouse
 
-My Lighthouse score was really good for accessibility both on desktop and mobile.
+My Lighthouse score was a mix of good and bad on both desktop and mobile. There can definitely be upgrades made to the performance.
+NOTE: I did not have internet access at home so there tests were performed on a low-quality internet. I'm not sure if that affects the results that much.
 
 ### LAPTOP RESULTS
 
 HOME PAGE
 
-![desktop](assets/images/desktop-lighthouse.png)
+![desktop](bookings/static/img/laptopindex.png)
 
 MENU PAGE
 
-![desktop]
+![desktop](bookings/static/img/laptopmenu.png)
 
 CONTACT PAGE
 
-![desktop]
+![desktop](bookings/static/img/laptopcontact.png)
 
 BOOKING PAGE
 
-![desktop]
+![desktop](bookings/static/img/laptopmenu.png)
 
 
 ### MOBILE RESULTS
 
 HOME PAGE
 
-![mobile]
+![mobile](bookings/static/img/mobileindex.png)
 
 MENU PAGE
 
-![mobile]
+![mobile](bookings/static/img/mobilemenu.png)
 
 CONTACT PAGE
 
-![mobile]
+![mobile](bookings/static/img/mobilecontact.png)
 
 BOOKING PAGE
 
-![mobile]
+![mobile](bookings/static/img/mobilelogin.png)
 
 - - -
 
